@@ -39,6 +39,26 @@
       <div class="row">
         <table class="col m6 offset-m3">
           <!-- Add jinja templateing to show Namy, type1, type2, Weight and Height of user's pokemon  -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type 1</th>
+              <th>Type 2</th>
+              <th>Weight</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for pokemon in pokemon_objects %}
+            <tr>
+              <td>{{pokemon.name}}</td>
+              <td>{{pokemon.type1}}</td>
+              <td>{{pokemon.type2}}</td>
+              <td>{{pokemon.weight}}</td>
+              <td>{{pokemon.height}}</td>
+            </tr>
+          {%endfor%}
+          </tbody>
         </table>
       </div>
         
