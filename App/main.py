@@ -44,7 +44,7 @@ def client_app():
 
 @app.route("/signup", methods=["POST"])
 def signup():
-  userdata = request.get_json()
+  userdata = request.get_json(force=True)
   print(userdata)
   new_u = User(username = userdata["username"], email=userdata["email"])
   new_u.set_password(userdata["password"])
